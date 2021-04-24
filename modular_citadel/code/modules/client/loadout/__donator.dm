@@ -129,7 +129,6 @@
 						"shoi87",
 						"svenja",
 						"panzer1944",
-						"purplepineapple",
 						"topbirb")
 	restricted_roles = list("NCR Ranger", "NCR Veteran Ranger", "NCR Off-Duty")
 
@@ -199,7 +198,6 @@
 						"shoi87",
 						"svenja",
 						"panzer1944",
-						"purplepineapple",
 						"topbirb")
 	restricted_roles = list("NCR Ranger", "NCR Veteran Ranger", "NCR Off-Duty")
 

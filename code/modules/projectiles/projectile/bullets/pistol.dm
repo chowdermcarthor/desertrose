@@ -1,7 +1,7 @@
 // 10mm
 /obj/item/projectile/bullet/c10mm
 	name = "10mm FMJ bullet"
-	damage = 29 //36
+	damage = 32 //36
 	armour_penetration = 0.1 //0.2
 	wound_bonus = 18
 	bare_wound_bonus = -18
@@ -15,7 +15,7 @@
 
 /obj/item/projectile/bullet/c10mm/hp
 	name = "10mm JHP bullet"
-	damage = 43 //45
+	damage = 48 //45
 	armour_penetration = -0.7
 	wound_bonus = -36
 	wound_bonus = 36
@@ -23,7 +23,7 @@
 // 9mm
 /obj/item/projectile/bullet/c9mm
 	name = "9mm FMJ bullet"
-	damage = 26
+	damage = 29
 	armour_penetration = 0.05 //0.15
 	wound_bonus = 15
 	bare_wound_bonus = -15
@@ -37,14 +37,14 @@
 
 /obj/item/projectile/bullet/c9mm/jhp
 	name = "9mm JHP bullet"
-	damage = 36
+	damage = 39
 	armour_penetration = -0.6
 	wound_bonus = -30
 	bare_wound_bonus = 30
 
 /obj/item/projectile/bullet/c9mm/op
 	name = "9mm +P bullet"
-	damage = 30 //39
+	damage = 35 //39
 	armour_penetration = 0.35 //0.4
 	wound_bonus = 30
 	bare_wound_bonus = 30
@@ -55,14 +55,14 @@
 // 12.7mm
 /obj/item/projectile/bullet/a127mm
 	name = "12.7mm FMJ bullet"
-	damage = 60
-	armour_penetration = 0.4
+	damage = 55
+	armour_penetration = 0.35
 	wound_bonus = 28
 	bare_wound_bonus = -28
 
 /obj/item/projectile/bullet/a127mm/jhp
 	name = "12.7mm JHP bullet"
-	damage = 70
+	damage = 66
 	armour_penetration = -1
 	wound_bonus = -56
 	bare_wound_bonus = 56
@@ -93,11 +93,10 @@
 /obj/item/projectile/bullet/needle
 	name = "needle"
 	icon_state = "cbbolt"
-	damage = 35
-	armour_penetration = 0.8
-	//makes the needler a dedicated armor piercing weapon instead of useless
+	damage = 8
+	armour_penetration = 0.3
 	var/piercing = FALSE
-/*
+
 /obj/item/projectile/bullet/needle/Initialize()
 	. = ..()
 	create_reagents(50, NO_REACT, NO_REAGENTS_VALUE)
@@ -122,11 +121,11 @@
 	DISABLE_BITFIELD(reagents.reagents_holder_flags, NO_REACT)
 	reagents.handle_reactions()
 	return BULLET_ACT_HIT
-*/
+
 /obj/item/projectile/bullet/needle/ap
 	name = "armour piercing needle"
-	damage = 33
-	armour_penetration = 1
+	damage = 5
+	armour_penetration = 0.5
 	wound_bonus = 0
 	bare_wound_bonus = 0
 	piercing = TRUE

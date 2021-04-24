@@ -1,16 +1,14 @@
-
-/obj/machinery/chem_master
-	name = "ChemMaster 3000"
-	desc = "Used to separate chemicals and distribute them in a variety of forms."
+/obj/machinery/alchemy_table
+	name = "Alchemy table"
+	desc = "A wooden table with various bone mortars and pistles, as well as other tools."
 	density = TRUE
 	layer = BELOW_OBJ_LAYER
 	icon = 'icons/obj/chemical.dmi'
-	icon_state = "mixer0"
+	icon_state = "alchemy_table"
 	use_power = IDLE_POWER_USE
-	idle_power_usage = 20
+	idle_power_usage = 5
 	resistance_flags = FIRE_PROOF | ACID_PROOF
-	circuit = /obj/item/circuitboard/machine/chem_master
-
+	
 	var/obj/item/reagent_containers/beaker = null
 	var/obj/item/storage/pill_bottle/bottle = null
 	var/mode = 1
@@ -22,7 +20,7 @@
 	var/list/pillStyles
 	var/fermianalyze //Give more detail on fermireactions on analysis
 
-/obj/machinery/chem_master/Initialize()
+/obj/machinery/alchemy_table/Initialize()
 	create_reagents(100)
 
 	//Calculate the span tags and ids fo all the available pill icons
@@ -36,28 +34,28 @@
 
 	. = ..()
 
-/obj/machinery/chem_master/Destroy()
+/obj/machinery/alchemy_table/Destroy()
 	QDEL_NULL(beaker)
 	QDEL_NULL(bottle)
 	return ..()
 
-/obj/machinery/chem_master/RefreshParts()
+/obj/machinery/alchemy_table/RefreshParts()
 	reagents.maximum_volume = 0
 	for(var/obj/item/reagent_containers/glass/beaker/B in component_parts)
 		reagents.maximum_volume += B.reagents.maximum_volume
 
-/obj/machinery/chem_master/ex_act(severity, target)
+/obj/machinery/alchemy_table/ex_act(severity, target)
 	if(severity < 3)
 		..()
 
-/obj/machinery/chem_master/contents_explosion(severity, target)
+/obj/machinery/alchemy_table/contents_explosion(severity, target)
 	..()
 	if(beaker)
 		beaker.ex_act(severity, target)
 	if(bottle)
 		bottle.ex_act(severity, target)
 
-/obj/machinery/chem_master/Exited(atom/movable/A, atom/newloc)
+/obj/machinery/alchemy_table/Exited(atom/movable/A, atom/newloc)
 	. = ..()
 	if(A == beaker)
 		beaker = null
@@ -66,23 +64,29 @@
 		bottle = null
 		update_icon()
 
-/obj/machinery/chem_master/update_icon_state()
+/obj/machinery/alchemy_table/update_icon_state()
 	if(beaker)
-		icon_state = "mixer1"
+		icon_state = "alchemy_table"
 	else
-		icon_state = "mixer0"
+		icon_state = "alchemy_table"
+/*
+/obj/machinery/alchemy_table/proc/eject_beaker(mob/user)
+	if(beaker)
+		beaker.forceMove(drop_location())
+		if(Adjacent(user) && !issilicon(user))
+			user.put_in_hands(beaker)
+		else
+			adjust_item_drop_location(beaker)
+		beaker = null
+		update_icon()*/
 
-/obj/machinery/chem_master/update_overlays()
-	. = ..()
-	if (stat & BROKEN)
-		. += "waitlight"
-
-/obj/machinery/chem_master/blob_act(obj/structure/blob/B)
+/obj/machinery/alchemy_table/blob_act(obj/structure/blob/B)
 	if (prob(50))
 		qdel(src)
 
-/obj/machinery/chem_master/attackby(obj/item/I, mob/user, params)
-	if(default_deconstruction_screwdriver(user, "mixer0_nopower", "mixer0", I))
+
+/obj/machinery/alchemy_table/attackby(obj/item/I, mob/user, params)
+/*	if(default_deconstruction_screwdriver(user, "mixer0_nopower", "mixer0", I))
 		return
 
 	else if(default_deconstruction_crowbar(I))
@@ -90,7 +94,7 @@
 
 	if(default_unfasten_wrench(user, I))
 		return
-
+*/
 	if(istype(I, /obj/item/reagent_containers) && !(I.item_flags & ABSTRACT) && I.is_open_container())
 		. = TRUE // no afterattack
 		if(panel_open)
@@ -116,7 +120,7 @@
 	else
 		return ..()
 
-/obj/machinery/chem_master/AltClick(mob/living/user)
+/obj/machinery/alchemy_table/AltClick(mob/living/user)
 	. = ..()
 	if(!istype(user) || !user.canUseTopic(src, BE_CLOSE, FALSE, NO_TK))
 		return
@@ -126,7 +130,7 @@
 		replace_pillbottle(user)
 	return TRUE
 
-/obj/machinery/chem_master/proc/replace_beaker(mob/living/user, obj/item/reagent_containers/new_beaker)
+/obj/machinery/alchemy_table/proc/replace_beaker(mob/living/user, obj/item/reagent_containers/new_beaker)
 	if(beaker)
 		var/obj/item/reagent_containers/B = beaker
 		B.forceMove(drop_location())
@@ -136,7 +140,7 @@
 		beaker = new_beaker
 	update_icon()
 
-/obj/machinery/chem_master/proc/replace_pillbottle(mob/living/user, obj/item/storage/pill_bottle/new_bottle)
+/obj/machinery/alchemy_table/proc/replace_pillbottle(mob/living/user, obj/item/storage/pill_bottle/new_bottle)
 	if(bottle)
 		var/obj/item/storage/pill_bottle/B = bottle
 		B.forceMove(drop_location())
@@ -147,28 +151,29 @@
 	if(new_bottle)
 		bottle = new_bottle
 
-/obj/machinery/chem_master/on_deconstruction()
+/obj/machinery/alchemy_table/on_deconstruction()
 	var/atom/A = drop_location()
 	beaker?.forceMove(A)
 	bottle?.forceMove(A)
 	return ..()
 
-/obj/machinery/chem_master/ui_assets(mob/user)
+/obj/machinery/alchemy_table/ui_assets(mob/user)
 	return list(
 		get_asset_datum(/datum/asset/spritesheet/simple/pills),
 	)
 
-/obj/machinery/chem_master/ui_interact(mob/living/user, datum/tgui/ui)
+//Checks to see if have tribal trait
+obj/machinery/alchemy_table/ui_interact(mob/living/user, datum/tgui/ui)
 	ui = SStgui.try_update_ui(user, src, ui)
 	if(istype(user, /mob/dead/observer))
 		if(!ui)
 			ui = new(user, src, "ChemMaster", name)
 			ui.open()
 	else
-		if(!user.IsAdvancedToolUser() && !istype(src, /obj/machinery/chem_master/condimaster))
+/*		if(!user.IsAdvancedToolUser() && !istype(src, /obj/machinery/chem_dispenser/drinks))
 			to_chat(user, "<span class='warning'>The legion has no use for drugs! Better to destroy it.</span>")
-			return
-		if(!HAS_TRAIT(user, TRAIT_CHEMWHIZ) && !istype(src, /obj/machinery/chem_master/condimaster))
+			return*/
+		if(!HAS_TRAIT(user, TRAIT_MACHINE_SPIRITS) && !istype(src, /obj/machinery/chem_dispenser/drinks))
 			to_chat(user, "<span class='warning'>Try as you might, you have no clue how to work this thing.</span>")
 			return
 		if(!ui)
@@ -177,7 +182,7 @@
 				ui.set_autoupdate(FALSE) //to not ruin the immersion by constantly changing the fake chemicals
 			ui.open()
 
-/obj/machinery/chem_master/ui_data(mob/user)
+/obj/machinery/alchemy_table/ui_data(mob/user)
 	var/list/data = list()
 	data["isBeakerLoaded"] = beaker ? 1 : 0
 	data["beakerCurrentVolume"] = beaker ? beaker.reagents.total_volume : null
@@ -210,7 +215,7 @@
 	data["pillStyles"] = pillStyles
 	return data
 
-/obj/machinery/chem_master/ui_act(action, params)
+/obj/machinery/alchemy_table/ui_act(action, params)
 	if(..())
 		return
 
@@ -428,13 +433,11 @@
 
 	return FALSE
 
-
-
-/obj/machinery/chem_master/proc/end_fermi_reaction()//Ends any reactions upon moving.
+/obj/machinery/alchemy_table/proc/end_fermi_reaction()//Ends any reactions upon moving.
 	if(beaker && beaker.reagents.fermiIsReacting)
 		beaker.reagents.fermiEnd()
 
-/obj/machinery/chem_master/proc/isgoodnumber(num)
+/obj/machinery/alchemy_table/proc/isgoodnumber(num)
 	if(isnum(num))
 		if(num > 200)
 			num = 200
@@ -447,7 +450,7 @@
 		return 0
 
 
-/obj/machinery/chem_master/adjust_item_drop_location(atom/movable/AM) // Special version for chemmasters and condimasters
+/obj/machinery/alchemy_table/adjust_item_drop_location(atom/movable/AM) // Special version for chemmasters and condimasters
 	if (AM == beaker)
 		AM.pixel_x = -8
 		AM.pixel_y = 8
@@ -466,61 +469,3 @@
 		. = . % 9
 		AM.pixel_x = ((.%3)*6)
 		AM.pixel_y = -8 + (round( . / 3)*8)
-
-/obj/machinery/chem_master/condimaster
-	name = "CondiMaster 3000"
-	desc = "Used to create condiments and other cooking supplies."
-	condi = TRUE
-
-/obj/machinery/chem_master/advanced
-	name = "Old-World Refinery"
-	desc = "A high-tech device that uses nuclear-diffusion to seperate chemicals."
-	icon_state = "mixerad0"
-
-/obj/machinery/chem_master/advanced/update_icon()
-	cut_overlays()
-	if(beaker)
-		icon_state = "mixerad1"
-	else
-		icon_state = "mixerad0"
-
-/obj/machinery/chem_master/advanced/attackby(obj/item/I, mob/user, params)
-	if(default_deconstruction_screwdriver(user, "mixerad0_nopower", "mixerad0", I))
-		return
-
-	else if(default_deconstruction_crowbar(I))
-		return
-
-	if(default_unfasten_wrench(user, I))
-		return
-
-	if(istype(I, /obj/item/reagent_containers) && !(I.item_flags & ABSTRACT) && I.is_open_container())
-		. = 1 // no afterattack
-		if(panel_open)
-			to_chat(user, "<span class='warning'>You can't use the [src.name] while its panel is opened!</span>")
-			return
-		if(beaker)
-			to_chat(user, "<span class='warning'>A container is already loaded into [src]!</span>")
-			return
-		if(!user.transferItemToLoc(I, src))
-			return
-
-		beaker = I
-		to_chat(user, "<span class='notice'>You add [I] to [src].</span>")
-		src.updateUsrDialog()
-		update_icon()
-
-	else if(!condi && istype(I, /obj/item/storage/pill_bottle))
-		if(bottle)
-			to_chat(user, "<span class='warning'>A pill bottle is already loaded into [src]!</span>")
-			return
-		if(!user.transferItemToLoc(I, src))
-			return
-
-		bottle = I
-		to_chat(user, "<span class='notice'>You add [I] into the dispenser slot.</span>")
-		src.updateUsrDialog()
-	else
-		return ..()
-#undef PILL_STYLE_COUNT
-#undef RANDOM_PILL_STYLE

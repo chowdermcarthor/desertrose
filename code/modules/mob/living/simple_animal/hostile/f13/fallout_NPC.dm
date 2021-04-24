@@ -582,9 +582,9 @@
 /obj/effect/mob_spawn/human/corpse/raider
 	name = "Raider"
 	uniform = /obj/item/clothing/under/f13/rag
-	suit = /obj/item/clothing/suit/armor/f13/raider/iconoclast
-	shoes = /obj/item/clothing/shoes/f13/explorer
-	gloves = /obj/item/clothing/gloves/f13/leather
+	suit = /obj/item/clothing/suit/armor/f13/tribal
+	shoes = /obj/item/clothing/shoes/f13/rag
+	//gloves = /obj/item/clothing/gloves/f13/ncr
 	//radio = /obj/item/device/radio/headset
 	//mask = /obj/item/clothing/mask/gas
 	head = /obj/item/clothing/head/helmet/f13/firefighter
@@ -604,7 +604,7 @@
 	minimum_distance = 0
 	melee_damage_lower = 50
 	melee_damage_upper = 50
-	loot = list(/obj/effect/mob_spawn/human/corpse/raider, /obj/item/twohanded/fireaxe)
+	loot = list(/obj/effect/mob_spawn/human/corpse/raider)
 	healable = 1
 	ranged = 0
 
@@ -617,18 +617,18 @@
 	minimum_distance = 0
 	melee_damage_lower = 40
 	melee_damage_upper = 40
-	loot = list(/obj/effect/mob_spawn/human/corpse/raider/tribal, /obj/item/twohanded/spear)
+	loot = list(/obj/effect/mob_spawn/human/corpse/raider/tribal)
 	healable = 1
 	ranged = 0
 
 /obj/effect/mob_spawn/human/corpse/raider/tribal
-	uniform = /obj/item/clothing/under/f13/raiderrags
-	suit = /obj/item/clothing/suit/armor/f13/tribal
+	uniform = /obj/item/clothing/under/f13/rag
+	suit = /obj/item/clothing/suit/armor/f13/raider/sadist
 	shoes = /obj/item/clothing/shoes/f13/rag
 	//gloves = /obj/item/clothing/gloves/f13/doom
 	//radio = /obj/item/device/radio/headset
-	mask = /obj/item/clothing/mask/facewrap
-	head = /obj/item/clothing/head/helmet/f13/fiend
+	//mask = /obj/item/clothing/mask/gas
+	head = /obj/item/clothing/head/f13/headscarf
 	//back = /obj/item/weapon/storage/backpack
 
 /mob/living/simple_animal/hostile/raider/baseball
@@ -642,15 +642,15 @@
 	melee_damage_upper = 40
 	maxHealth = 200
 	health = 200
-	loot = list(/obj/effect/mob_spawn/human/corpse/raider/baseball, /obj/item/twohanded/baseball)
+	loot = list(/obj/effect/mob_spawn/human/corpse/raider/baseball)
 	healable = 1
 	ranged = 0
 
 /obj/effect/mob_spawn/human/corpse/raider/baseball
-	uniform = /obj/item/clothing/under/f13/mechanic
+	uniform = /obj/item/clothing/under/f13/rag
 	suit = /obj/item/clothing/suit/armor/f13/raider/yankee
-	shoes = /obj/item/clothing/shoes/f13/explorer
-	gloves = /obj/item/clothing/gloves/f13/leather/fingerless
+	shoes = /obj/item/clothing/shoes/f13/rag
+	//gloves = /obj/item/clothing/gloves/f13/doom
 	//radio = /obj/item/device/radio/headset
 	//mask = /obj/item/clothing/mask/gas
 	head = /obj/item/clothing/head/helmet/f13/raider/yankee
@@ -667,20 +667,22 @@
 	melee_damage_upper = 20
 	maxHealth = 200
 	health = 200
-	loot = list(/obj/effect/mob_spawn/human/corpse/raider/biker, /obj/item/gun/ballistic/revolver/thatgun)
+	loot = list(/obj/effect/mob_spawn/human/corpse/raider/biker)
 	healable = 1
 	ranged = 1
-	projectiletype = /obj/item/projectile/bullet/a556/match
+	projectiletype = /obj/item/projectile/bullet/m44/simple
 	projectilesound = 'sound/f13weapons/magnum_fire.ogg'
-	casingtype = /obj/item/ammo_casing/a556
+	casingtype = /obj/item/ammo_casing/m44
 
 /obj/effect/mob_spawn/human/corpse/raider/biker
-	uniform = /obj/item/clothing/under/f13/ncrcf
-	suit = /obj/item/clothing/suit/armor/f13/combatrusted
-	shoes = /obj/item/clothing/shoes/f13/explorer
-	gloves = /obj/item/clothing/gloves/f13/leather/fingerless
-	head = /obj/item/clothing/head/helmet/f13/raidercombathelmet
-	neck = /obj/item/clothing/neck/cloak
+	uniform = /obj/item/clothing/under/f13/rag
+	suit = /obj/item/clothing/suit/armor/f13/slam
+	shoes = /obj/item/clothing/shoes/f13/rag
+	//gloves = /obj/item/clothing/gloves/f13/doom
+	//radio = /obj/item/device/radio/headset
+	//mask = /obj/item/clothing/mask/gas
+	head = /obj/item/clothing/head/helmet/f13/motorcycle
+	//back = /obj/item/weapon/storage/backpack
 
 /mob/living/simple_animal/hostile/abomination
 	name = "abomination"

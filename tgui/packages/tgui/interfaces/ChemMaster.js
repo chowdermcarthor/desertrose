@@ -237,31 +237,21 @@ const PackagingControls = (props, context) => {
     setPackAmount,
   ] = useSharedState(context, 'packAmount', 1);
   const [
-    stimpakAmount,
-    setstimpakAmount,
-  ] = useSharedState(context, 'setstimpakAmount', 1);
+    vialAmount,
+    setvialAmount,
+  ] = useSharedState(context, 'setvialAmount', 1);
   const [
-    superstimpakAmount,
-    setsuperstimpakAmount,
-  ] = useSharedState(context, 'setsuperstimpakAmount', 1);
-  const [
-    powderbagAmount,
-    setPowderbagAmount,
-  ] = useSharedState(context, 'setPowderbagAmount', 1);
-  const [
-    primitiveBottleAmount,
-    setprimitiveBottleAmount,
-  ] = useSharedState(context, 'setprimitiveBottleAmount', 1);
+    dartAmount,
+    setdartAmount,
+  ] = useSharedState(context, 'setdartAmount', 1);
   const {
     condi,
-    advanced,
-    primitive,
     chosenPillStyle,
     pillStyles = [],
   } = data;
   return (
     <LabeledList>
-      {!condi && !primitive && (
+      {!condi && (
         <LabeledList.Item label="Pill type">
           {pillStyles.map(pill => (
             <Button
@@ -276,7 +266,7 @@ const PackagingControls = (props, context) => {
           ))}
         </LabeledList.Item>
       )}
-      {!condi && !primitive && (
+      {!condi && (
         <PackagingControlsItem
           label="Pills"
           amount={pillAmount}
@@ -289,7 +279,7 @@ const PackagingControls = (props, context) => {
             volume: 'auto',
           })} />
       )}
-      {!condi && !!advanced && !primitive &&(
+      {!condi && (
         <PackagingControlsItem
           label="Patches"
           amount={patchAmount}
@@ -302,7 +292,7 @@ const PackagingControls = (props, context) => {
             volume: 'auto',
           })} />
       )}
-      {!condi && !primitive &&(
+      {!condi && (
         <PackagingControlsItem
           label="Bottles"
           amount={bottleAmount}
@@ -315,29 +305,29 @@ const PackagingControls = (props, context) => {
             volume: 'auto',
           })} />
       )}
-      {!condi && !primitive &&(
+      {!condi && (
         <PackagingControlsItem
-          label="Stimpaks"
-          amount={stimpakAmount}
-          amountUnit="stimpaks"
-          sideNote="max 10u"
-          onChangeAmount={(e, value) => setstimpakAmount(value)}
+          label="Hypovials"
+          amount={vialAmount}
+          amountUnit="vials"
+          sideNote="max 60u"
+          onChangeAmount={(e, value) => setvialAmount(value)}
           onCreate={() => act('create', {
-            type: 'stimPak',
-            amount: stimpakAmount,
+            type: 'hypoVial',
+            amount: vialAmount,
             volume: 'auto',
           })} />
       )}
-      {!condi && !!advanced && !primitive &&(
+      {!condi && (
         <PackagingControlsItem
-          label="Super Stimpaks"
-          amount={superstimpakAmount}
-          amountUnit="super stimpaks"
+          label="Smartdarts"
+          amount={dartAmount}
+          amountUnit="darts"
           sideNote="max 20u"
-          onChangeAmount={(e, value) => setsuperstimpakAmount(value)}
+          onChangeAmount={(e, value) => setdartAmount(value)}
           onCreate={() => act('create', {
-            type: 'superStimpak',
-            amount: superstimpakAmount,
+            type: 'smartDart',
+            amount: dartAmount,
             volume: 'auto',
           })} />
       )}
@@ -364,32 +354,6 @@ const PackagingControls = (props, context) => {
           onCreate={() => act('create', {
             type: 'condimentBottle',
             amount: bottleAmount,
-            volume: 'auto',
-          })} />
-      )}
-      {!!primitive &&(
-        <PackagingControlsItem
-          label="Powder Bag"
-          amount={patchAmount}
-          amountUnit="powderbags"
-          sideNote="max 40u"
-          onChangeAmount={(e, value) => setPowderbagAmount(value)}
-          onCreate={() => act('create', {
-            type: 'bag',
-            amount: powderbagAmount,
-            volume: 'auto',
-          })} />
-      )}
-      {!!primitive && (
-        <PackagingControlsItem
-          label="Primitive Bottles"
-          amount={bottleAmount}
-          amountUnit="bottles"
-          sideNote="max 60u"
-          onChangeAmount={(e, value) => setprimitiveBottleAmount(value)}
-          onCreate={() => act('create', {
-            type: 'bottle_primitive',
-            amount: primitiveBottleAmount,
             volume: 'auto',
           })} />
       )}

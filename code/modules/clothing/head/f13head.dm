@@ -85,6 +85,12 @@
 	name = "reinforced combat helmet"
 	color = "#302E2E" // Dark Grey
 
+/obj/item/clothing/head/helmet/f13/combat/mk2/raider
+	name = "customized raider combat helmet"
+	desc = "(VI) A reinforced combat helmet painted black with the laser designator removed."
+	icon_state = "combat_helmet_raider"
+	item_state = "combat_helmet_raider"
+
 /obj/item/clothing/head/helmet/f13/rangerbroken
 	name = "broken riot helmet"
 	icon_state = "ranger_broken"
@@ -263,7 +269,7 @@
 	var/mob/living/carbon/human/H = user
 	if(src == H.head) //Suit is already equipped
 		return ..()
-	if (!HAS_TRAIT(H, TRAIT_PA_WEAR) && !istype(src, /obj/item/clothing/head/helmet/f13/power_armor/t45b) && slot == SLOT_HEAD && requires_training)
+	if (!HAS_TRAIT(H, TRAIT_PA_WEAR) && slot == SLOT_HEAD && requires_training)
 		to_chat(user, "<span class='warning'>You don't have the proper training to operate the power armor!</span>")
 		return 0
 	if(slot == SLOT_HEAD)
@@ -315,6 +321,13 @@
 	armor_block_chance = 25
 	deflection_chance = 10 //10% chance to block damage from blockable bullets and redirect the bullet at a random angle. Not nearly as effective as true power armor
 	requires_training = FALSE
+
+/obj/item/clothing/head/helmet/f13/power_armor/t45b/restored
+	name = "restored T-45b helmet"
+	desc = "(VIII) It's a restored T-45b power armor helmet."
+	armor_block_chance = 80
+	deflection_chance = 20 //20% chance to block damage from blockable bullets and redirect the bullet at a random angle
+	requires_training = TRUE
 
 /obj/item/clothing/head/helmet/f13/power_armor/raiderpa_helm
 	name = "raider T-45b power helmet"

@@ -619,6 +619,7 @@
 	can_unsuppress = FALSE
 	suppressed = 1
 	fire_delay = 3
+	burst_shot_delay = 2
 	fire_sound = 'sound/weapons/Gunshot_large_silenced.ogg'
 	can_bayonet = FALSE
 	force = 15
@@ -634,7 +635,7 @@
 	item_state = "servicerifle"
 	fire_sound = 'sound/f13weapons/varmint_rifle.ogg'
 	mag_type = /obj/item/ammo_box/magazine/m556/rifle
-	fire_delay = 5
+	fire_delay = 4
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
 	can_bayonet = TRUE
@@ -685,6 +686,7 @@
 	icon_state = "R82"
 	item_state = "R84"
 	//automatic = 1
+	spread = 3
 	burst_size = 2
 	fire_delay = 3
 	automatic_burst_overlay = TRUE
@@ -734,7 +736,7 @@
 	mag_type = /obj/item/ammo_box/magazine/m556/rifle
 	extra_damage = 0
 	extra_penetration = 0
-	fire_delay = 8
+	fire_delay = 5
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
 	spawnwithmagazine = FALSE
@@ -816,7 +818,7 @@
 	scope_x_offset = 4
 	scope_y_offset = 11
 	can_suppress = TRUE
-	scope_state = "rifle_suppressor"
+	suppressor_state = "rifle_suppressor"
 	suppressor_x_offset = 27
 	suppressor_y_offset = 27
 	//automatic = 0
@@ -1233,10 +1235,10 @@
 	desc = "An integrally suppressed bolt action carbine, perfect for quiet varmint hunting. Uses .45 pistol magazines."
 	icon_state = "delisle"
 	item_state = "varmintrifle"
-	mag_type = /obj/item/ammo_box/magazine/m45
+	mag_type = /obj/item/ammo_box/magazine/greasegun
 	extra_damage = 3
 	extra_penetration = 0.06
-	fire_delay = 6
+	fire_delay = 4.5
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
 	can_suppress = FALSE

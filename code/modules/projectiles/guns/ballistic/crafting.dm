@@ -1,5 +1,4 @@
 // Grease Gun //
-/*
 /obj/item/gun/ballistic/automatic/greasegun/attackby(obj/item/W, mob/user, params)
 	if(istype(W,/obj/item/screwdriver))
 		var/obj/item/A = new /obj/item/prefabs/complex/screw
@@ -21,7 +20,7 @@
 		qdel(src)
 		to_chat(usr,"You dissasemble the [src].")
 	. = ..()
-*/
+
 /obj/item/gun/ballistic/automatic/greasegun/mid
 	name = "enhanced m3a1 grease gun"
 
@@ -32,7 +31,7 @@
 /obj/item/gun/ballistic/automatic/greasegun/mid/disable_burst()
 	. = ..()
 	spread = 0
-/*
+
 /obj/item/gun/ballistic/automatic/greasegun/mid/attackby(obj/item/W, mob/user, params)
 	if(istype(W,/obj/item/screwdriver))
 		var/obj/item/A = new /obj/item/prefabs/complex/screw
@@ -54,7 +53,7 @@
 		qdel(src)
 		to_chat(usr,"You dissasemble the [src].")
 	. = ..()
-*/
+
 /obj/item/gun/ballistic/automatic/greasegun/high
 	name = "advanced m3a1 grease gun"
 	burst_size = 3
@@ -71,7 +70,6 @@
 	. = ..()
 	spread = 0
 
-/*
 /obj/item/gun/ballistic/automatic/greasegun/high/attackby(obj/item/W, mob/user, params)
 	if(istype(W,/obj/item/screwdriver))
 		var/obj/item/A = new /obj/item/prefabs/complex/screw
@@ -116,7 +114,7 @@
 		qdel(src)
 		to_chat(usr,"You dissasemble the [src].")
 	. = ..()
-*/
+
 /obj/item/gun/ballistic/automatic/smg10mm/mid
 	name = "enhanced 10mm submachine gun"
 	extra_penetration = 0
@@ -130,7 +128,6 @@
 	. = ..()
 	spread = 0
 
-/*
 /obj/item/gun/ballistic/automatic/smg10mm/mid/attackby(obj/item/W, mob/user, params)
 	if(istype(W,/obj/item/screwdriver))
 		var/obj/item/A = new /obj/item/prefabs/complex/screw
@@ -152,7 +149,7 @@
 		qdel(src)
 		to_chat(usr,"You dissasemble the [src].")
 	. = ..()
-*/
+
 /obj/item/gun/ballistic/automatic/smg10mm/high
 	name = "advanced 10mm submachine gun"
 	burst_size = 3
@@ -168,7 +165,7 @@
 /obj/item/gun/ballistic/automatic/smg10mm/high/disable_burst()
 	. = ..()
 	spread = 0
-/*
+
 /obj/item/gun/ballistic/automatic/smg10mm/high/attackby(obj/item/W, mob/user, params)
 	if(istype(W,/obj/item/screwdriver))
 		var/obj/item/A = new /obj/item/prefabs/complex/screw
@@ -213,7 +210,7 @@
 		qdel(src)
 		to_chat(usr,"You dissasemble the [src].")
 	. = ..()
-*/
+
 /obj/item/gun/ballistic/automatic/pps/mid
 	name = "enhanced ppsh-41"
 	burst_shot_delay = 1.5
@@ -228,7 +225,7 @@
 /obj/item/gun/ballistic/automatic/pps/mid/disable_burst()
 	. = ..()
 	spread = 0
-/*
+
 /obj/item/gun/ballistic/automatic/pps/mid/attackby(obj/item/W, mob/user, params)
 	if(istype(W,/obj/item/screwdriver))
 		var/obj/item/A = new /obj/item/prefabs/complex/screw
@@ -250,7 +247,7 @@
 		qdel(src)
 		to_chat(usr,"You dissasemble the [src].")
 	. = ..()
-*/
+
 /obj/item/gun/ballistic/automatic/pps/high
 	name = "advanced ppsh41"
 	extra_damage = 0
@@ -264,7 +261,7 @@
 /obj/item/gun/ballistic/automatic/pps/high/disable_burst()
 	. = ..()
 	spread = 0
-/*
+
 /obj/item/gun/ballistic/automatic/pps/high/attackby(obj/item/W, mob/user, params)
 	if(istype(W,/obj/item/screwdriver))
 		var/obj/item/A = new /obj/item/prefabs/complex/screw
@@ -286,7 +283,7 @@
 		qdel(src)
 		to_chat(usr,"You dissasemble the [src].")
 	. = ..()
-*/
+
 /obj/item/gun/ballistic/automatic/pps/burst_select()
 	var/mob/living/carbon/human/user = usr
 	switch(select)
@@ -309,7 +306,7 @@
 	playsound(user, 'sound/weapons/empty.ogg', 100, 1)
 	update_icon()
 	return
-/*
+
 /obj/item/gun/ballistic/automatic/mini_uzi/attackby(obj/item/W, mob/user, params)
 	if(istype(W,/obj/item/screwdriver))
 		var/obj/item/A = new /obj/item/prefabs/complex/screw
@@ -331,7 +328,7 @@
 		qdel(src)
 		to_chat(usr,"You dissasemble the [src].")
 	. = ..()
-*/
+
 // UZI //
 /obj/item/gun/ballistic/automatic/mini_uzi/mid
 	name = "enhanced uzi"
@@ -346,7 +343,7 @@
 /obj/item/gun/ballistic/automatic/mini_uzi/mid/disable_burst()
 	. = ..()
 	spread = 0
-/*
+
 /obj/item/gun/ballistic/automatic/mini_uzi/mid/attackby(obj/item/W, mob/user, params)
 	if(istype(W,/obj/item/screwdriver))
 		var/obj/item/A = new /obj/item/prefabs/complex/screw
@@ -368,7 +365,7 @@
 		qdel(src)
 		to_chat(usr,"You dissasemble the [src].")
 	. = ..()
-*/
+
 /obj/item/gun/ballistic/automatic/mini_uzi/high
 	name = "advanced uzi"
 	fire_delay = 3
@@ -382,7 +379,7 @@
 /obj/item/gun/ballistic/automatic/mini_uzi/high/disable_burst()
 	. = ..()
 	spread = 0
-/*
+
 /obj/item/gun/ballistic/automatic/mini_uzi/high/attackby(obj/item/W, mob/user, params)
 	if(istype(W,/obj/item/screwdriver))
 		var/obj/item/A = new /obj/item/prefabs/complex/screw
@@ -404,7 +401,7 @@
 		qdel(src)
 		to_chat(usr,"You dissasemble the [src].")
 	. = ..()
-*/
+
 /obj/item/gun/ballistic/automatic/mini_uzi/burst_select()
 	var/mob/living/carbon/human/user = usr
 	switch(select)
@@ -429,7 +426,6 @@
 	return
 
 // R91 //
-/*
 /obj/item/gun/ballistic/automatic/assault_rifle/attackby(obj/item/W, mob/user, params)
 	if(istype(W,/obj/item/screwdriver))
 		var/obj/item/A = new /obj/item/prefabs/complex/screw
@@ -453,7 +449,7 @@
 		qdel(src)
 		to_chat(usr,"You dissasemble the [src].")
 	. = ..()
-*/
+
 /obj/item/gun/ballistic/automatic/assault_rifle/mid
 	name = "enhanced r91 assault rifle"
 	fire_delay = 3
@@ -468,7 +464,7 @@
 /obj/item/gun/ballistic/automatic/assault_rifle/mid/disable_burst()
 	. = ..()
 	spread = 0
-/*
+
 /obj/item/gun/ballistic/automatic/assault_rifle/mid/attackby(obj/item/W, mob/user, params)
 	if(istype(W,/obj/item/screwdriver))
 		var/obj/item/A = new /obj/item/prefabs/complex/screw
@@ -492,7 +488,7 @@
 		qdel(src)
 		to_chat(usr,"You dissasemble the [src].")
 	. = ..()
-*/
+
 /obj/item/gun/ballistic/automatic/assault_rifle/high
 	name = "advanced r91 assault rifle"
 	fire_delay = 3
@@ -508,7 +504,7 @@
 /obj/item/gun/ballistic/automatic/assault_rifle/high/disable_burst()
 	. = ..()
 	spread = 0
-/*
+
 /obj/item/gun/ballistic/automatic/assault_rifle/high/attackby(obj/item/W, mob/user, params)
 	if(istype(W,/obj/item/screwdriver))
 		var/obj/item/A = new /obj/item/prefabs/complex/screw
@@ -532,14 +528,14 @@
 		qdel(src)
 		to_chat(usr,"You dissasemble the [src].")
 	. = ..()
-*/
+
 /obj/item/gun/ballistic/automatic/service/mid
 	name = "service rifle (improved)"
 	randomspread = 0
 	fire_delay = 4
 	extra_damage = 0
 	extra_penetration = 0
-/*
+
 /obj/item/gun/ballistic/automatic/service/mid/attackby(obj/item/W, mob/user, params)
 	if(istype(W,/obj/item/screwdriver))
 		var/obj/item/A = new /obj/item/prefabs/complex/screw
@@ -559,7 +555,7 @@
 		qdel(src)
 		to_chat(usr,"You dissasemble the [src].")
 	. = ..()
-*/
+
 /obj/item/gun/ballistic/automatic/service/high
 	name = "service rifle (masterwork)"
 	randomspread = 0
@@ -567,7 +563,7 @@
 	extra_damage = 10
 	extra_penetration = 0.2
 	weapon_weight = WEAPON_LIGHT
-/*
+
 /obj/item/gun/ballistic/automatic/service/high/attackby(obj/item/W, mob/user, params)
 	if(istype(W,/obj/item/screwdriver))
 		var/obj/item/A = new /obj/item/prefabs/complex/screw
@@ -612,12 +608,12 @@
 		qdel(src)
 		to_chat(usr,"You dissasemble the [src].")
 	. = ..()
-*/
+
 /obj/item/gun/ballistic/automatic/rangemaster/scoped/mid
 	name = "enhanced colt rangemaster"
 	extra_penetration = 0
 	extra_damage = 0
-/*
+
 /obj/item/gun/ballistic/automatic/rangemaster/scoped/mid/attackby(obj/item/W, mob/user, params)
 	if(istype(W,/obj/item/screwdriver))
 		var/obj/item/A = new /obj/item/prefabs/complex/screw
@@ -641,13 +637,13 @@
 		qdel(src)
 		to_chat(usr,"You dissasemble the [src].")
 	. = ..()
-*/
+
 /obj/item/gun/ballistic/automatic/rangemaster/scoped/high
 	name = "advanced colt rangemaster"
 	fire_delay = 4
 	extra_penetration = 0.14
 	extra_damage = 7
-/*
+
 /obj/item/gun/ballistic/automatic/rangemaster/scoped/high/attackby(obj/item/W, mob/user, params)
 	if(istype(W,/obj/item/screwdriver))
 		var/obj/item/A = new /obj/item/prefabs/complex/screw
@@ -671,4 +667,3 @@
 		qdel(src)
 		to_chat(usr,"You dissasemble the [src].")
 	. = ..()
-*/

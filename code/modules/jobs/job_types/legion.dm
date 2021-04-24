@@ -824,7 +824,6 @@ Auxilia
 	if(visualsOnly)
 		return
 	ADD_TRAIT(H, TRAIT_SURGERY_MID, src)
-	ADD_TRAIT(H, TRAIT_MASTER_GUNSMITH, src)
 
 /datum/outfit/loadout/auxengi
 	name = "Opifex (Blacksmith)"
@@ -899,7 +898,7 @@ Camp Follower
 	jobtype = /datum/outfit/job/CaesarsLegion/f13campfollower
 	shoes = /obj/item/clothing/shoes/roman
 	r_hand = /obj/item/flashlight/lantern
-	uniform = 		/obj/item/clothing/under/f13/campfollowermale
+	uniform = 		/obj/item/clothing/under/f13/romaskirt/auxilia
 	id =			/obj/item/card/id/dogtag/legfollower
 	ears = 			/obj/item/radio/headset/headset_legion
 	gloves = /obj/item/clothing/gloves/legion
@@ -923,8 +922,7 @@ Camp Follower
 		/obj/item/storage/bag/plants=1,
 		/obj/item/cultivator=1,
 		/obj/item/shovel/spade=1,
-		/obj/item/storage/fancy/egg_box=1,
-		/obj/item/clothing/under/f13/campfollowerfemale
+		/obj/item/storage/fancy/egg_box=1
 	)
 
 /datum/outfit/loadout/campfollowerhealer
@@ -934,8 +932,7 @@ Camp Follower
 	backpack_contents = list(
 		/obj/item/reagent_containers/pill/patch/healingpowder=2,
 		/obj/item/reagent_containers/pill/patch/healpoultice=2,
-		/obj/item/smelling_salts/crafted=1,
-		/obj/item/clothing/under/f13/campfollowerfemale
+		/obj/item/smelling_salts/crafted=1
 	)
 
 /datum/outfit/loadout/campfolloweroffduty

@@ -452,7 +452,6 @@ Combat Engineer
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/marksmancarbine)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/lmg)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/scoutcarbine)
-	ADD_TRAIT(H, TRAIT_MASTER_GUNSMITH, src)
 
 /*
 Trooper
@@ -715,9 +714,9 @@ Veteran Ranger
 	suit =	/obj/item/clothing/suit/toggle/armor/f13/rangerrecon
 	belt =	/obj/item/storage/belt/military/reconbandolier
 	head = /obj/item/clothing/head/helmet/f13/combat/swat
-	suit_store = /obj/item/gun/ballistic/automatic/service/carbine
+	suit_store = /obj/item/gun/ballistic/automatic/marksman
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/m556/rifle/assault = 3,
+		/obj/item/ammo_box/magazine/m556/rifle/assault = 2,
 		/obj/item/storage/survivalkit_aid=1
 	)
 
@@ -738,9 +737,9 @@ Veteran Ranger
 	head = /obj/item/clothing/head/f13/ranger
 	uniform = /obj/item/clothing/under/f13/ranger/patrol
 	belt =	/obj/item/storage/belt/military/assault/ncr
-	suit_store = /obj/item/gun/ballistic/automatic/service/carbine
+	suit_store = /obj/item/gun/ballistic/automatic/marksman
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/m556/rifle/assault = 3,
+		/obj/item/ammo_box/magazine/m556/rifle/assault = 2,
 		/obj/item/clothing/head/helmet/f13/combat/ncr_patrol = 1,
 		/obj/item/storage/survivalkit_aid = 1
 	)
@@ -767,7 +766,7 @@ Veteran Ranger
 	belt =	/obj/item/storage/belt/military/assault/ncr
 	suit_store = /obj/item/gun/ballistic/automatic/m1carbine/compact
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/m10mm_adv = 3,
+		/obj/item/ammo_box/magazine/m10mm_adv = 2,
 		/obj/item/storage/firstaid/ancient = 1,
 		/obj/item/clothing/accessory/armband/med/ncr = 1,
 		/obj/item/clothing/head/helmet/f13/combat/ncr_patrol = 1,

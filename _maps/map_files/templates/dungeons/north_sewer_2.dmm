@@ -14,8 +14,9 @@
 "aD" = (
 /obj/machinery/door/airlock/grunge,
 /obj/structure/barricade/wooden/planks/pregame,
-/obj/machinery/door/poddoor{
-	id = "hell"
+/obj/machinery/door/poddoor/shutters{
+	id = "pain";
+	name = "door shutters"
 	},
 /turf/open/floor/plating/tunnel{
 	icon_state = "tunnelrusty"
@@ -81,14 +82,6 @@
 /obj/structure/wreck/trash/two_barrels,
 /turf/open/floor/plating/tunnel,
 /area/f13/radiation)
-"bx" = (
-/obj/machinery/button/door{
-	id = "hell";
-	name = "Door Control"
-	},
-/obj/structure/table/reinforced,
-/turf/open/indestructible/ground/inside/subway,
-/area/f13/bunker)
 "by" = (
 /obj/item/storage/trash_stack,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -131,12 +124,6 @@
 "cA" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/indestructible/ground/inside/mountain,
-/area/f13/caves)
-"cB" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plating/tunnel{
-	icon_state = "tunnelchess"
-	},
 /area/f13/caves)
 "cI" = (
 /obj/effect/decal/cleanable/dirt/dust,
@@ -191,13 +178,6 @@
 	icon_state = "redrustyfull"
 	},
 /area/f13/radiation)
-"dj" = (
-/obj/machinery/button/door{
-	id = "hell";
-	name = "Door Control"
-	},
-/turf/closed/indestructible/f13vaultrusted,
-/area/f13/caves)
 "dk" = (
 /obj/effect/decal/cleanable/oil/slippery,
 /turf/open/indestructible/ground/inside/subway,
@@ -247,16 +227,6 @@
 /mob/living/simple_animal/hostile/raider/baseball,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/bunker)
-"eg" = (
-/obj/structure/simple_door/metal/ventilation,
-/obj/structure/barricade/wooden/planks/pregame,
-/obj/machinery/door/poddoor{
-	id = "pain"
-	},
-/turf/open/floor/plating/tunnel{
-	icon_state = "tunnelrusty"
-	},
-/area/f13/bunker)
 "en" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/girder/reinforced,
@@ -289,11 +259,11 @@
 /turf/open/floor/plasteel/freezer,
 /area/f13/bunker)
 "eY" = (
-/obj/structure/table/reinforced,
-/obj/machinery/button/door{
-	id = "soup";
-	name = "Door Control"
+/mob/living/simple_animal/hostile/handy/protectron{
+	faction = list("raider")
 	},
+/obj/effect/spawner/lootdrop/f13/seedspawner,
+/obj/effect/spawner/lootdrop/f13/seedspawner,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/bunker)
 "fg" = (
@@ -310,11 +280,6 @@
 	icon_state = "yellowdirtyfull"
 	},
 /area/f13/bunker)
-"fn" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/nest/deathclaw,
-/turf/open/indestructible/ground/inside/mountain,
-/area/f13/caves)
 "fs" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/blood/gibs/old,
@@ -442,8 +407,9 @@
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/bunker)
 "ik" = (
-/obj/machinery/door/poddoor{
-	id = "pain"
+/obj/machinery/door/poddoor/shutters{
+	id = "pain";
+	name = "door shutters"
 	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/bunker)
@@ -649,8 +615,10 @@
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/bunker)
 "mn" = (
-/turf/closed/indestructible/f13vaultrusted,
-/area/f13/bunker)
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/barricade/wooden/strong,
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/caves)
 "mt" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/item/storage/trash_stack,
@@ -704,7 +672,7 @@
 /obj/structure/decoration/rag{
 	icon_state = "skulls"
 	},
-/turf/closed/indestructible/f13vaultrusted,
+/turf/closed/wall/r_wall/rust,
 /area/f13/caves)
 "np" = (
 /obj/effect/decal/cleanable/dirt/dust,
@@ -743,6 +711,9 @@
 	icon_state = "redrustyfull"
 	},
 /area/f13/radiation)
+"nQ" = (
+/turf/closed/wall/r_wall/rust,
+/area/f13/caves)
 "oo" = (
 /obj/structure/timeddoor/sixtyminute,
 /turf/closed/mineral/random/low_chance,
@@ -776,10 +747,11 @@
 /turf/open/indestructible/ground/inside/subway,
 /area/f13/tunnel)
 "oO" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/machinery/door/poddoor{
-	id = "pain"
+/obj/machinery/door/poddoor/shutters{
+	id = "pain";
+	name = "door shutters"
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/bunker)
 "oV" = (
@@ -824,9 +796,7 @@
 /area/f13/bunker)
 "pE" = (
 /obj/structure/simple_door/metal/ventilation,
-/obj/machinery/door/poddoor{
-	id = "okay"
-	},
+/obj/structure/barricade/wooden/planks/pregame,
 /turf/open/floor/plating/tunnel{
 	icon_state = "tunnelrusty"
 	},
@@ -923,7 +893,6 @@
 "qZ" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/item/shovel/spade,
-/obj/effect/spawner/lootdrop/f13/seedspawner,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/bunker)
 "rb" = (
@@ -943,10 +912,6 @@
 /obj/effect/spawner/lootdrop/f13/weapon/melee/random,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/bunker)
-"rh" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/closed/mineral/random/low_chance,
-/area/f13/caves)
 "rj" = (
 /obj/effect/decal/cleanable/blood/old{
 	icon_state = "gib5-old"
@@ -982,12 +947,6 @@
 /obj/machinery/photocopier,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/bunker)
-"sr" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plating/tunnel{
-	icon_state = "tunnelrusty"
-	},
-/area/f13/caves)
 "st" = (
 /obj/structure/simple_door/metal/ventilation,
 /obj/structure/barricade/wooden/planks/pregame,
@@ -1131,13 +1090,6 @@
 /obj/effect/decal/remains/human,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/bunker)
-"uP" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/remains/human,
-/turf/open/floor/plating/tunnel{
-	icon_state = "tunnelchess"
-	},
-/area/f13/caves)
 "uX" = (
 /obj/effect/decal/remains/robot,
 /obj/effect/decal/cleanable/oil/slippery,
@@ -1210,13 +1162,6 @@
 	icon_state = "tunnelchess2"
 	},
 /area/f13/bunker)
-"vo" = (
-/obj/machinery/button/door{
-	id = "soup";
-	name = "Door Control"
-	},
-/turf/closed/indestructible/f13vaultrusted,
-/area/f13/caves)
 "vu" = (
 /obj/structure/closet/crate{
 	anchored = 1;
@@ -1277,19 +1222,13 @@
 /area/f13/radiation)
 "wv" = (
 /obj/effect/decal/cleanable/dirt,
-/mob/living/simple_animal/hostile/abomhorror/nsb,
-/turf/open/floor/plasteel/f13{
-	icon_state = "redrustyfull"
+/obj/effect/decal/cleanable/blood,
+/obj/item/reagent_containers/food/snacks/meat/slab/human,
+/mob/living/simple_animal/hostile/deathclaw{
+	speed = -2
 	},
-/area/f13/radiation)
-"wx" = (
-/obj/effect/decal/fakelattice,
-/obj/effect/decal/cleanable/dirt/dust,
-/obj/structure/girder/reinforced,
-/turf/open/floor/plating/tunnel{
-	icon_state = "tunnelrusty"
-	},
-/area/f13/bunker)
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/caves)
 "wy" = (
 /obj/machinery/light/broken,
 /obj/machinery/chem_dispenser,
@@ -1371,12 +1310,6 @@
 	icon_state = "yellowdirtyfull"
 	},
 /area/f13/bunker)
-"yj" = (
-/obj/structure/decoration/rag{
-	icon_state = "skulls"
-	},
-/turf/closed/indestructible/f13vaultrusted,
-/area/f13/bunker)
 "yk" = (
 /obj/structure/barricade/wooden/strong,
 /turf/open/indestructible/ground/inside/subway,
@@ -1400,15 +1333,6 @@
 "yu" = (
 /obj/item/storage/trash_stack,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
-/area/f13/bunker)
-"yw" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/table,
-/obj/machinery/button/door{
-	id = "okay";
-	name = "Door Control"
-	},
-/turf/open/indestructible/ground/inside/subway,
 /area/f13/bunker)
 "yI" = (
 /obj/effect/decal/fakelattice,
@@ -1492,12 +1416,13 @@
 /area/f13/bunker)
 "zF" = (
 /obj/structure/simple_door/metal/ventilation,
+/obj/machinery/door/poddoor/shutters{
+	id = "pain";
+	name = "door shutters"
+	},
 /obj/structure/barricade/wooden/planks/pregame,
 /obj/structure/decoration/rag{
 	icon_state = "skin"
-	},
-/obj/machinery/door/poddoor{
-	id = "pain"
 	},
 /turf/open/floor/plating/tunnel{
 	icon_state = "tunnelrusty"
@@ -1520,7 +1445,6 @@
 /area/f13/bunker)
 "Af" = (
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/effect/decal/cleanable/oil/slippery,
 /obj/effect/decal/cleanable/oil/slippery,
 /turf/open/floor/plating/tunnel{
 	icon_state = "tunnelrusty"
@@ -1619,11 +1543,6 @@
 /obj/structure/barricade/wooden/planks/pregame,
 /turf/open/indestructible/ground/inside/subway,
 /area/f13/tunnel)
-"Cs" = (
-/turf/open/floor/plating/tunnel{
-	icon_state = "tunnelchess"
-	},
-/area/f13/caves)
 "Cx" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/blackbox_recorder,
@@ -1684,7 +1603,7 @@
 /area/f13/bunker)
 "DA" = (
 /obj/structure/timeddoor/sixtyminute,
-/turf/closed/indestructible/f13vaultrusted,
+/turf/closed/wall/f13/ruins,
 /area/f13/tunnel)
 "DB" = (
 /obj/effect/decal/cleanable/dirt,
@@ -1793,15 +1712,6 @@
 /obj/effect/spawner/lootdrop/f13/cash_random_med,
 /turf/open/indestructible/ground/inside/subway,
 /area/f13/tunnel)
-"FJ" = (
-/obj/effect/decal/fakelattice,
-/obj/effect/decal/cleanable/dirt/dust,
-/obj/effect/decal/cleanable/oil/slippery,
-/obj/structure/girder/reinforced,
-/turf/open/floor/plating/tunnel{
-	icon_state = "tunnelrusty"
-	},
-/area/f13/bunker)
 "FP" = (
 /obj/item/wrench/crude,
 /turf/open/indestructible/ground/inside/subway,
@@ -1840,9 +1750,10 @@
 /area/f13/bunker)
 "Gt" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plating/tunnel{
-	icon_state = "tunnelchess2"
+/mob/living/simple_animal/hostile/deathclaw{
+	speed = -2
 	},
+/turf/open/indestructible/ground/inside/mountain,
 /area/f13/caves)
 "Gw" = (
 /obj/structure/girder/reinforced,
@@ -1936,18 +1847,14 @@
 /area/f13/bunker)
 "IL" = (
 /obj/effect/decal/cleanable/dirt,
-/mob/living/simple_animal/hostile/abomhorror/nsb,
+/mob/living/simple_animal/hostile/abomhorror{
+	faction = list("raider");
+	obj_damage = 300
+	},
 /turf/open/floor/plating/tunnel{
 	icon_state = "tunnelrusty"
 	},
 /area/f13/radiation)
-"IN" = (
-/obj/machinery/button/door{
-	id = "okay";
-	name = "Door Control"
-	},
-/turf/closed/indestructible/f13vaultrusted,
-/area/f13/bunker)
 "IR" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/destructible/tribal_torch/lit,
@@ -2097,11 +2004,21 @@
 	},
 /area/f13/bunker)
 "KO" = (
-/obj/structure/decoration/rag{
-	icon_state = "skin"
+/mob/living/simple_animal/hostile/abomhorror{
+	desc = "A terrible fusion of man and something else entirely. It looks to be in great pain.";
+	faction = list("raider");
+	health = 2000;
+	icon_living = "abomination";
+	icon_state = "abomination";
+	name = "Abomination";
+	obj_damage = 300;
+	speed = -1;
+	wound_bonus = 0
 	},
-/turf/closed/indestructible/f13vaultrusted,
-/area/f13/bunker)
+/turf/open/floor/plasteel/f13{
+	icon_state = "redrustyfull"
+	},
+/area/f13/radiation)
 "KP" = (
 /obj/effect/decal/cleanable/dirt,
 /mob/living/simple_animal/hostile/deathclaw/mother{
@@ -2155,7 +2072,7 @@
 /obj/effect/spawner/lootdrop/f13/traitbooks,
 /obj/item/gun/ballistic/automatic/pistol/pistol127/compact,
 /turf/open/indestructible/ground/inside/mountain,
-/area/f13/bunker)
+/area/f13/caves)
 "LG" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/ash,
@@ -2249,14 +2166,6 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/bunker)
-"Nz" = (
-/obj/machinery/door/poddoor{
-	id = "soup"
-	},
-/turf/open/floor/plating/tunnel{
-	icon_state = "tunnelrusty"
-	},
-/area/f13/caves)
 "NN" = (
 /obj/effect/decal/remains/human,
 /obj/effect/decal/cleanable/blood/old{
@@ -2342,7 +2251,7 @@
 /area/f13/tunnel)
 "Qr" = (
 /obj/structure/decoration/shock,
-/turf/closed/indestructible/f13vaultrusted,
+/turf/closed/wall/r_wall/rust,
 /area/f13/bunker)
 "QB" = (
 /obj/machinery/light/broken{
@@ -2466,11 +2375,6 @@
 "Sy" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/item/paper,
-/obj/structure/table/reinforced,
-/obj/machinery/button/door{
-	id = "hate";
-	name = "Door Control"
-	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/bunker)
 "Sz" = (
@@ -2527,12 +2431,9 @@
 /obj/effect/spawner/lootdrop/f13/medical/wasteland/meds/drug,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/bunker)
-"TE" = (
-/turf/closed/indestructible/f13vaultrusted,
-/area/f13/tunnel)
 "TH" = (
 /obj/structure/decoration/warning,
-/turf/closed/indestructible/f13vaultrusted,
+/turf/closed/wall/r_wall/rust,
 /area/f13/bunker)
 "TO" = (
 /obj/effect/decal/cleanable/dirt/dust,
@@ -2572,8 +2473,14 @@
 /turf/open/floor/plasteel/freezer,
 /area/f13/bunker)
 "UD" = (
-/obj/structure/barricade/wooden/planks/pregame,
-/turf/closed/indestructible/f13vaultrusted,
+/obj/structure/simple_door/metal/ventilation,
+/obj/machinery/door/poddoor/shutters{
+	id = "pain";
+	name = "door shutters"
+	},
+/turf/open/floor/plating/tunnel{
+	icon_state = "tunnelrusty"
+	},
 /area/f13/bunker)
 "UM" = (
 /obj/effect/decal/cleanable/dirt,
@@ -2634,9 +2541,9 @@
 	name = "M1 Garand"
 	},
 /obj/item/clothing/suit/armor/f13/battlecoat,
-/turf/open/floor/plating/tunnel{
-	icon_state = "tunnelchess"
-	},
+/obj/item/ammo_box/a762box,
+/obj/item/ammo_box/a762box,
+/turf/open/indestructible/ground/inside/mountain,
 /area/f13/caves)
 "VL" = (
 /obj/structure/girder/reinforced,
@@ -2663,15 +2570,6 @@
 	icon_state = "yellowdirtyfull"
 	},
 /area/f13/bunker)
-"Wi" = (
-/obj/structure/simple_door/metal/ventilation,
-/obj/machinery/door/poddoor{
-	id = "hate"
-	},
-/turf/open/floor/plating/tunnel{
-	icon_state = "tunnelrusty"
-	},
-/area/f13/bunker)
 "Wj" = (
 /mob/living/simple_animal/hostile/deathclaw,
 /turf/open/water,
@@ -2687,7 +2585,7 @@
 /turf/closed/wall/r_wall/rust,
 /area/f13/bunker)
 "WY" = (
-/obj/structure/nest/deathclaw,
+/obj/structure/barricade/wooden/strong,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/caves)
 "Xa" = (
@@ -2711,11 +2609,8 @@
 	icon_state = "skin"
 	},
 /obj/structure/barricade/wooden/planks/pregame,
-/turf/closed/indestructible/f13vaultrusted,
+/turf/closed/wall/r_wall/rust,
 /area/f13/bunker)
-"Xo" = (
-/turf/closed/indestructible/f13vaultrusted,
-/area/f13/caves)
 "Xr" = (
 /obj/effect/decal/cleanable/dirt,
 /mob/living/simple_animal/hostile/deathclaw/mother{
@@ -2733,23 +2628,11 @@
 	icon_state = "tunnelrusty"
 	},
 /area/f13/bunker)
-"XA" = (
-/obj/structure/simple_door/metal/ventilation,
-/obj/machinery/door/poddoor{
-	id = "pain"
-	},
-/turf/open/floor/plating/tunnel{
-	icon_state = "tunnelrusty"
-	},
-/area/f13/bunker)
 "XC" = (
 /obj/structure/simple_door/metal/ventilation,
 /obj/structure/barricade/wooden/planks/pregame,
 /obj/structure/decoration/rag{
 	icon_state = "skin"
-	},
-/obj/machinery/door/poddoor{
-	id = "malice"
 	},
 /turf/open/floor/plating/tunnel{
 	icon_state = "tunnelrusty"
@@ -2778,10 +2661,13 @@
 /area/f13/tunnel)
 "Yg" = (
 /obj/structure/table/reinforced,
-/obj/machinery/button/door{
-	id = "malice";
-	name = "Door Control"
-	},
+/obj/item/reagent_containers/food/snacks/meat/slab/human,
+/obj/item/reagent_containers/food/snacks/meat/slab/human,
+/obj/item/reagent_containers/food/snacks/meat/slab/human,
+/obj/item/reagent_containers/food/snacks/meat/slab/human,
+/obj/item/reagent_containers/food/snacks/meat/slab/human/centaur,
+/obj/item/reagent_containers/food/snacks/meat/slab/human/ghoul,
+/obj/item/reagent_containers/food/snacks/meat/slab/human/ghoul,
 /turf/open/floor/plasteel/freezer,
 /area/f13/bunker)
 "Yk" = (
@@ -2826,9 +2712,6 @@
 /area/f13/bunker)
 "YU" = (
 /obj/item/cultivator,
-/mob/living/simple_animal/hostile/handy/protectron{
-	faction = list("raider")
-	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/bunker)
 "Za" = (
@@ -2842,11 +2725,6 @@
 /obj/structure/barricade/wooden/planks/pregame,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/bunker)
-"Zv" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/indestructible/ground/inside/mountain,
-/area/f13/caves)
 "ZB" = (
 /obj/effect/decal/cleanable/dirt,
 /mob/living/simple_animal/hostile/handy/sentrybot{
@@ -2880,7 +2758,6 @@
 "ZR" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/waste,
-/mob/living/simple_animal/hostile/abomhorror/nsb,
 /turf/open/floor/plasteel/f13{
 	icon_state = "redrustyfull"
 	},
@@ -2891,7 +2768,6 @@
 	faction = list("raider");
 	obj_damage = 300
 	},
-/obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plating/tunnel,
 /area/f13/bunker)
 
@@ -2935,11 +2811,11 @@ BH
 "}
 (2,1,1) = {"
 QU
-mn
-mn
-mn
-mn
-mn
+Yn
+Yn
+Yn
+Yn
+Yn
 QU
 BH
 BH
@@ -2973,11 +2849,11 @@ BH
 "}
 (3,1,1) = {"
 QU
-mn
+Yn
 df
 ZN
 jM
-mn
+Yn
 QU
 BH
 BH
@@ -3011,11 +2887,11 @@ QU
 "}
 (4,1,1) = {"
 QU
-mn
+Yn
 wm
 ZR
 KI
-mn
+Yn
 QU
 BH
 BH
@@ -3049,11 +2925,11 @@ BH
 "}
 (5,1,1) = {"
 QU
-mn
+Yn
 wm
 ZN
 Df
-mn
+Yn
 QU
 BH
 BH
@@ -3087,11 +2963,11 @@ BH
 "}
 (6,1,1) = {"
 QU
-mn
+Yn
 wm
 ZN
 wm
-mn
+Yn
 QU
 BH
 BH
@@ -3125,11 +3001,11 @@ BH
 "}
 (7,1,1) = {"
 QU
-mn
+Yn
 dr
-ln
+KO
 DB
-mn
+Yn
 QU
 QU
 QU
@@ -3163,22 +3039,22 @@ qz
 "}
 (8,1,1) = {"
 QU
-mn
+Yn
 QG
-wv
+ZN
 oq
-mn
-mn
-mn
-mn
-IN
-mn
-mn
-mn
-mn
-mn
-mn
-mn
+Yn
+Yn
+Yn
+Yn
+Yn
+Yn
+Yn
+Yn
+Yn
+Yn
+Yn
+Yn
 QU
 BH
 BH
@@ -3201,11 +3077,11 @@ qz
 "}
 (9,1,1) = {"
 QU
-mn
+Yn
 cs
 ln
-wv
-mn
+ZN
+Yn
 jX
 yl
 yR
@@ -3216,7 +3092,7 @@ OT
 tI
 tI
 fk
-mn
+Yn
 QU
 BH
 BH
@@ -3239,7 +3115,7 @@ BH
 "}
 (10,1,1) = {"
 QU
-mn
+Yn
 nC
 ZN
 ru
@@ -3248,13 +3124,13 @@ UO
 IL
 UR
 vQ
-mn
+Yn
 dL
 iK
 Ba
 OT
 ew
-mn
+Yn
 QU
 BH
 BH
@@ -3277,22 +3153,22 @@ QU
 "}
 (11,1,1) = {"
 QU
-mn
-mn
+Yn
+Yn
 Qr
 qQ
-mn
-mn
-mn
-mn
-mn
-mn
+Yn
+Yn
+Yn
+Yn
+Yn
+Yn
 QB
 Vp
 OT
 qF
 wy
-mn
+Yn
 QU
 BH
 BH
@@ -3316,7 +3192,7 @@ BH
 (12,1,1) = {"
 QU
 QU
-mn
+Yn
 hc
 xg
 PI
@@ -3330,7 +3206,7 @@ OT
 yh
 yh
 MZ
-mn
+Yn
 QU
 BH
 BH
@@ -3354,7 +3230,7 @@ BH
 (13,1,1) = {"
 BH
 QU
-mn
+Yn
 ER
 aU
 pC
@@ -3368,7 +3244,7 @@ OT
 yh
 KM
 fu
-mn
+Yn
 QU
 BH
 BH
@@ -3392,7 +3268,7 @@ BH
 (14,1,1) = {"
 BH
 QU
-Xo
+nQ
 Tq
 Ai
 vv
@@ -3406,7 +3282,7 @@ JI
 VS
 gS
 tx
-mn
+Yn
 QU
 BH
 BH
@@ -3430,7 +3306,7 @@ BH
 (15,1,1) = {"
 BH
 QU
-Xo
+nQ
 BL
 kE
 Cp
@@ -3444,7 +3320,7 @@ Yn
 Yn
 aN
 aJ
-mn
+Yn
 QU
 BH
 BH
@@ -3468,7 +3344,7 @@ BH
 (16,1,1) = {"
 BH
 QU
-Xo
+nQ
 Ls
 he
 SK
@@ -3482,7 +3358,7 @@ yI
 yL
 vf
 xl
-mn
+Yn
 QU
 BH
 BH
@@ -3506,21 +3382,21 @@ BH
 (17,1,1) = {"
 BH
 QU
-Xo
+nQ
 he
 he
 Xf
-mn
 Yn
 Yn
-XA
+Yn
+aJ
 Yn
 ve
 Yn
 Yn
 Yn
 Yn
-mn
+Yn
 QU
 BH
 BH
@@ -3544,11 +3420,11 @@ BH
 (18,1,1) = {"
 BH
 QU
-Xo
+nQ
 ZK
 Xf
 Va
-mn
+Yn
 fI
 HE
 RH
@@ -3558,7 +3434,7 @@ Yn
 eY
 Tm
 LP
-mn
+Yn
 QU
 BH
 BH
@@ -3582,11 +3458,11 @@ BH
 (19,1,1) = {"
 BH
 QU
-Xo
+nQ
 Dg
 he
 Va
-mn
+Yn
 wC
 rM
 PI
@@ -3596,7 +3472,7 @@ Yn
 QX
 YU
 nd
-mn
+Yn
 QU
 BH
 BH
@@ -3620,11 +3496,11 @@ BH
 (20,1,1) = {"
 BH
 QU
-Xo
+nQ
 XO
 aM
 kE
-mn
+Yn
 Sy
 XH
 Mc
@@ -3658,11 +3534,11 @@ BH
 (21,1,1) = {"
 BH
 QU
-Xo
+nQ
 mP
 Va
 Qk
-mn
+Yn
 Rx
 Fo
 pC
@@ -3672,7 +3548,7 @@ aJ
 pC
 Nf
 Hw
-mn
+Yn
 QU
 BH
 BH
@@ -3696,11 +3572,11 @@ BH
 (22,1,1) = {"
 BH
 QU
-Xo
+nQ
 Va
 kE
 Tq
-mn
+Yn
 sh
 PI
 QK
@@ -3710,7 +3586,7 @@ Yn
 KD
 pC
 LP
-mn
+Yn
 QU
 BH
 BH
@@ -3734,11 +3610,11 @@ BH
 (23,1,1) = {"
 BH
 QU
-Xo
+nQ
 jc
 he
 Uv
-mn
+Yn
 Jz
 ZP
 Ik
@@ -3748,7 +3624,7 @@ Yn
 gP
 ll
 yu
-mn
+Yn
 QU
 BH
 BH
@@ -3772,24 +3648,24 @@ BH
 (24,1,1) = {"
 oo
 oo
-Xo
+nQ
 wI
 uL
 Cr
-KO
-mn
+kI
+Yn
 Cc
 Xn
-mn
-eg
-yj
-mn
+Yn
+op
+WO
+Yn
 mx
-mn
-mn
+Yn
+Yn
 DA
-TE
-TE
+Re
+Re
 wI
 Re
 Re
@@ -3924,7 +3800,7 @@ Kb
 (28,1,1) = {"
 QU
 BH
-Xo
+nQ
 Fw
 UM
 Sx
@@ -3962,7 +3838,7 @@ Ns
 (29,1,1) = {"
 QU
 BH
-Xo
+nQ
 FP
 Sx
 Tq
@@ -3976,7 +3852,7 @@ Yn
 fs
 TO
 vf
-mn
+Yn
 QU
 BH
 BH
@@ -4000,7 +3876,7 @@ BH
 (30,1,1) = {"
 QU
 BH
-Xo
+nQ
 vb
 Sx
 Tq
@@ -4014,7 +3890,7 @@ Yn
 Yn
 Yn
 fD
-mn
+Yn
 QU
 BH
 BH
@@ -4037,8 +3913,8 @@ BH
 "}
 (31,1,1) = {"
 QU
-Xo
-Xo
+nQ
+nQ
 Tq
 If
 RZ
@@ -4052,7 +3928,7 @@ Yn
 dP
 Ix
 cb
-mn
+Yn
 QU
 BH
 BH
@@ -4075,7 +3951,7 @@ BH
 "}
 (32,1,1) = {"
 QU
-Xo
+nQ
 ld
 Sx
 Fj
@@ -4090,7 +3966,7 @@ Yn
 po
 WO
 LR
-mn
+Yn
 QU
 BH
 BH
@@ -4113,7 +3989,7 @@ BH
 "}
 (33,1,1) = {"
 QU
-Xo
+nQ
 db
 Sx
 cW
@@ -4128,7 +4004,7 @@ Yn
 vm
 Gw
 vf
-mn
+Yn
 QU
 QU
 QU
@@ -4151,7 +4027,7 @@ BH
 "}
 (34,1,1) = {"
 QU
-Xo
+nQ
 Ps
 Sx
 vv
@@ -4166,23 +4042,23 @@ Yn
 Yn
 Yn
 RR
-mn
-mn
-mn
-mn
-yj
-mn
-mn
-mn
-mn
-mn
-mn
-mn
-mn
-mn
-mn
-mn
-mn
+Yn
+Yn
+Yn
+Yn
+WO
+Yn
+Yn
+Yn
+Yn
+Yn
+Yn
+Yn
+Yn
+Yn
+Yn
+Yn
+Yn
 QU
 BH
 BH
@@ -4206,7 +4082,7 @@ ts
 kO
 bl
 uw
-Wi
+aJ
 vc
 ki
 Za
@@ -4228,7 +4104,7 @@ BH
 (36,1,1) = {"
 QU
 QU
-Xo
+nQ
 Va
 UM
 kE
@@ -4291,7 +4167,7 @@ Jj
 eU
 Jt
 dp
-wx
+Yn
 aU
 qb
 vh
@@ -4329,7 +4205,7 @@ TZ
 Yg
 Yn
 ZZ
-FJ
+Yn
 Qj
 aK
 LH
@@ -4342,7 +4218,7 @@ BH
 (39,1,1) = {"
 QU
 QU
-Xo
+nQ
 QO
 he
 Ko
@@ -4367,7 +4243,7 @@ fg
 FT
 Yn
 yI
-wx
+Yn
 tG
 rE
 RU
@@ -4380,7 +4256,7 @@ BH
 (40,1,1) = {"
 QU
 BH
-Xo
+nQ
 nq
 Sx
 Tq
@@ -4405,7 +4281,7 @@ eF
 Uz
 Yn
 pJ
-FJ
+Yn
 gB
 Ce
 RU
@@ -4418,7 +4294,7 @@ BH
 (41,1,1) = {"
 QU
 BH
-Xo
+nQ
 oJ
 Fj
 Sx
@@ -4443,7 +4319,7 @@ Yn
 Yn
 Yn
 cI
-aN
+Yn
 rb
 He
 qG
@@ -4456,7 +4332,7 @@ BH
 (42,1,1) = {"
 QU
 BH
-Xo
+nQ
 je
 vv
 QN
@@ -4494,7 +4370,7 @@ BH
 (43,1,1) = {"
 QU
 BH
-Xo
+nQ
 wI
 kE
 Sx
@@ -4504,27 +4380,27 @@ Yn
 AU
 Yn
 Yn
-UD
-mn
-mn
-KO
-mn
+Jt
+Yn
+Yn
+kI
+Yn
 zF
+Jt
+Yn
+Yn
+Yn
+Yn
+Yn
+Yn
+Yn
 UD
-mn
-mn
-mn
-mn
-mn
-mn
-mn
-XA
-mn
-mn
-mn
+Yn
+Yn
+Yn
 aD
-mn
-mn
+Yn
+Yn
 QU
 BH
 BH
@@ -4558,7 +4434,7 @@ pC
 ka
 YP
 zZ
-QU
+BH
 BH
 BH
 in
@@ -4596,7 +4472,7 @@ PI
 KA
 EO
 vN
-QU
+BH
 BH
 BH
 HM
@@ -4645,20 +4521,20 @@ BH
 "}
 (47,1,1) = {"
 QU
-QU
 BH
-mn
+BH
+Yn
 Dh
-UD
-mn
-mn
-mn
-mn
-mn
-mn
+Jt
+Yn
+Yn
+Yn
+Yn
+Yn
+Yn
 TH
-mn
-mn
+Yn
+Yn
 jB
 xw
 ag
@@ -4676,7 +4552,7 @@ QU
 Dn
 MX
 DD
-dj
+nQ
 QU
 BH
 BH
@@ -4684,7 +4560,7 @@ BH
 (48,1,1) = {"
 QU
 BH
-QU
+BH
 Pv
 Qh
 jE
@@ -4714,7 +4590,7 @@ QU
 OX
 DD
 DD
-Xo
+nQ
 QU
 BH
 BH
@@ -4743,7 +4619,7 @@ en
 WG
 ck
 Vw
-bx
+BH
 BH
 QU
 QU
@@ -4752,7 +4628,7 @@ BH
 sR
 DD
 lP
-Xo
+nQ
 QU
 BH
 BH
@@ -4788,7 +4664,7 @@ BH
 BH
 BH
 BH
-DD
+Wj
 cA
 QU
 QU
@@ -4800,7 +4676,7 @@ QU
 BH
 BH
 BH
-yw
+ck
 ck
 BH
 BH
@@ -4881,7 +4757,7 @@ BH
 BH
 BH
 QU
-sR
+BH
 sR
 cA
 lP
@@ -4919,7 +4795,7 @@ BH
 BH
 QU
 BH
-sR
+BH
 cA
 lP
 DD
@@ -4956,8 +4832,8 @@ BH
 QU
 QU
 BH
-sR
-cA
+BH
+mn
 sR
 sR
 sR
@@ -4967,7 +4843,7 @@ DD
 Wj
 DD
 DD
-DD
+Wj
 sR
 sR
 sR
@@ -4993,15 +4869,15 @@ ga
 BH
 BH
 BH
-sR
-sR
+BH
+WY
+mn
+BH
+BH
+BH
+BH
 cA
 sR
-BH
-BH
-BH
-rh
-Hr
 DD
 lP
 lP
@@ -5016,7 +4892,7 @@ sR
 sR
 yp
 oV
-yp
+wv
 vi
 BH
 QU
@@ -5033,15 +4909,15 @@ cA
 cA
 cA
 uJ
-sR
 BH
-Xo
-Xo
-Xo
-Xo
-Xo
+BH
+QU
+QU
+BH
+BH
 sR
-fn
+sR
+cA
 cA
 sR
 DD
@@ -5055,7 +4931,7 @@ BH
 cA
 ZF
 cA
-WY
+sR
 BH
 QU
 BH
@@ -5073,14 +4949,14 @@ PF
 BH
 BH
 QU
-Xo
-Cs
-uP
+QU
+Hr
+cA
 Gt
-Nz
-sr
-cB
-Zv
+sR
+BH
+BH
+BH
 sR
 sR
 DD
@@ -5111,14 +4987,14 @@ BH
 BH
 BH
 QU
-Xo
-vo
-VE
-Xo
-QU
 QU
 BH
-rh
+VE
+BH
+BH
+QU
+BH
+BH
 BH
 sR
 sR

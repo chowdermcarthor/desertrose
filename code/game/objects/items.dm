@@ -157,7 +157,10 @@ GLOBAL_VAR_INIT(embedpocalypse, FALSE) // if true, all items will be able to emb
 
 	var/canMouseDown = FALSE
 
+<<<<<<< HEAD
 	var/caps_value = 0 //For purposes of selling things at the wasteland vendor
+=======
+>>>>>>> parent of 36bf96597b (Crafting and Caps)
 
 /obj/item/Initialize()
 
@@ -269,6 +272,7 @@ GLOBAL_VAR_INIT(embedpocalypse, FALSE) // if true, all items will be able to emb
 		var/datum/block_parry_data/data = return_block_parry_datum(block_parry_data)
 		. += "[src] has the capacity to be used to block and/or parry. <a href='?src=[REF(data)];name=[name];block=[item_flags & ITEM_CAN_BLOCK];parry=[item_flags & ITEM_CAN_PARRY];render=1'>\[Show Stats\]</a>"
 
+<<<<<<< HEAD
 	if(caps_value)
 		if(istype(src, /obj/item/stack))
 			var/obj/item/stack/S = src
@@ -277,6 +281,8 @@ GLOBAL_VAR_INIT(embedpocalypse, FALSE) // if true, all items will be able to emb
 		else
 			. += "<font color='blue'>Value: [caps_value] caps</font>"
 
+=======
+>>>>>>> parent of 36bf96597b (Crafting and Caps)
 	if(!user.research_scanner)
 		return
 
@@ -313,7 +319,6 @@ GLOBAL_VAR_INIT(embedpocalypse, FALSE) // if true, all items will be able to emb
 		research_msg += "None"
 	research_msg += "."
 	. += research_msg.Join()
-
 
 /obj/item/interact(mob/user)
 	add_fingerprint(user)
@@ -1146,4 +1151,4 @@ GLOBAL_VAR_INIT(embedpocalypse, FALSE) // if true, all items will be able to emb
 			played_sound = pick(equipsound)
 
 		playsound(src, played_sound, volume, 1)
-
+		

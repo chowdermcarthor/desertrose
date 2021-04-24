@@ -20,7 +20,10 @@
 	icon = 'icons/fallout/objects/crafting.dmi'
 	item_state = "null"
 	w_class = WEIGHT_CLASS_TINY
+<<<<<<< HEAD
 	caps_value = 10
+=======
+>>>>>>> parent of 36bf96597b (Crafting and Caps)
 
 /obj/item/crafting/diode
 	name = "diode"
@@ -110,7 +113,10 @@
 	name = "duct tape"
 	desc = "A pinnacle of engineering - it fixes everything!"
 	icon_state = "duct_tape"
+<<<<<<< HEAD
 	caps_value = 30 //Jackpot
+=======
+>>>>>>> parent of 36bf96597b (Crafting and Caps)
 
 /obj/item/crafting/coffee_pot
 	name = "coffeepot"
@@ -140,14 +146,20 @@
 	name = "abraxo"
 	desc = "A pre-War cleaning agent produced by Abraxodyne Chemical."
 	icon_state = "abraxo"
+<<<<<<< HEAD
 	caps_value = 8
+=======
+>>>>>>> parent of 36bf96597b (Crafting and Caps)
 
 /obj/item/crafting/reloader
 	name = "makeshift reloader"
 	desc = "This device allows you to hand-craft your own gun rounds using certain raw materials."
 	icon_state = "reloader"
 	tool_behaviour = TOOL_MSRELOADER
+<<<<<<< HEAD
 	caps_value = 20
+=======
+>>>>>>> parent of 36bf96597b (Crafting and Caps)
 
 /obj/item/crafting/igniter
 	name = "igniter"

@@ -72,7 +72,10 @@
 	refined_type = /obj/item/stack/sheet/mineral/uranium
 	merge_type = /obj/item/stack/ore/uranium
 <<<<<<< HEAD
+<<<<<<< HEAD
 	caps_value = 15
+=======
+>>>>>>> parent of 36bf96597b (Crafting and Caps)
 =======
 >>>>>>> parent of 36bf96597b (Crafting and Caps)
 
@@ -86,7 +89,10 @@
 	refined_type = /obj/item/stack/sheet/metal
 	merge_type = /obj/item/stack/ore/iron
 <<<<<<< HEAD
+<<<<<<< HEAD
 	caps_value = 1
+=======
+>>>>>>> parent of 36bf96597b (Crafting and Caps)
 =======
 >>>>>>> parent of 36bf96597b (Crafting and Caps)
 
@@ -121,7 +127,10 @@
 	custom_materials = list(/datum/material/blackpowder=MINERAL_MATERIAL_AMOUNT)
 	w_class = WEIGHT_CLASS_TINY
 <<<<<<< HEAD
+<<<<<<< HEAD
 	caps_value = 5
+=======
+>>>>>>> parent of 36bf96597b (Crafting and Caps)
 =======
 >>>>>>> parent of 36bf96597b (Crafting and Caps)
 
@@ -203,7 +212,10 @@ GLOBAL_LIST_INIT(sand_recipes, list(\
 	refined_type = /obj/item/stack/sheet/mineral/plasma
 	merge_type = /obj/item/stack/ore/plasma
 <<<<<<< HEAD
+<<<<<<< HEAD
 	caps_value = 3
+=======
+>>>>>>> parent of 36bf96597b (Crafting and Caps)
 =======
 >>>>>>> parent of 36bf96597b (Crafting and Caps)
 
@@ -221,7 +233,10 @@ GLOBAL_LIST_INIT(sand_recipes, list(\
 	refined_type = /obj/item/stack/sheet/mineral/silver
 	merge_type = /obj/item/stack/ore/silver
 <<<<<<< HEAD
+<<<<<<< HEAD
 	caps_value = 7
+=======
+>>>>>>> parent of 36bf96597b (Crafting and Caps)
 =======
 >>>>>>> parent of 36bf96597b (Crafting and Caps)
 
@@ -235,7 +250,10 @@ GLOBAL_LIST_INIT(sand_recipes, list(\
 	refined_type = /obj/item/stack/sheet/mineral/gold
 	merge_type = /obj/item/stack/ore/gold
 <<<<<<< HEAD
+<<<<<<< HEAD
 	caps_value = 15
+=======
+>>>>>>> parent of 36bf96597b (Crafting and Caps)
 =======
 >>>>>>> parent of 36bf96597b (Crafting and Caps)
 
@@ -249,7 +267,10 @@ GLOBAL_LIST_INIT(sand_recipes, list(\
 	refined_type = /obj/item/stack/sheet/mineral/diamond
 	merge_type = /obj/item/stack/ore/diamond
 <<<<<<< HEAD
+<<<<<<< HEAD
 	caps_value = 20
+=======
+>>>>>>> parent of 36bf96597b (Crafting and Caps)
 =======
 >>>>>>> parent of 36bf96597b (Crafting and Caps)
 
@@ -263,7 +284,10 @@ GLOBAL_LIST_INIT(sand_recipes, list(\
 	refined_type = /obj/item/stack/sheet/mineral/bananium
 	merge_type = /obj/item/stack/ore/bananium
 <<<<<<< HEAD
+<<<<<<< HEAD
 	caps_value = 10
+=======
+>>>>>>> parent of 36bf96597b (Crafting and Caps)
 =======
 >>>>>>> parent of 36bf96597b (Crafting and Caps)
 
@@ -277,7 +301,10 @@ GLOBAL_LIST_INIT(sand_recipes, list(\
 	refined_type = /obj/item/stack/sheet/mineral/titanium
 	merge_type = /obj/item/stack/ore/titanium
 <<<<<<< HEAD
+<<<<<<< HEAD
 	caps_value = 10
+=======
+>>>>>>> parent of 36bf96597b (Crafting and Caps)
 =======
 >>>>>>> parent of 36bf96597b (Crafting and Caps)
 

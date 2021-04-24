@@ -86,6 +86,7 @@
 
 /obj/machinery/mineral/wasteland_trader/attackby(obj/item/I, mob/user, params)
 <<<<<<< HEAD
+<<<<<<< HEAD
 	if(istype(I, /obj/item/stack/f13Cash/caps))
 		to_chat(usr, "<span class='warning'>You can't sell caps for caps.</span>")
 		return
@@ -112,10 +113,27 @@
 	value_per = goods_list[I.type]
 	if(!isnum(value_per))
 >>>>>>> parent of 36bf96597b (Crafting and Caps)
+=======
+	add_caps(I)
+	//not sure why anything else was here anyways?
+
+/* Adding a caps to caps storage and release vending item. */
+/obj/machinery/mineral/wasteland_trader/proc/add_caps(obj/item/I)
+	var/final_value = 0
+	var/value_per = 0
+
+	if(!(I?.type in goods_list))
+		to_chat(usr, "<span class='notice'>[src] is not buying that!</span>")
+		return
+
+	value_per = goods_list[I.type]
+	if(!isnum(value_per))
+>>>>>>> parent of 36bf96597b (Crafting and Caps)
 		return
 
 	if(istype(I, /obj/item/stack))
 		var/obj/item/stack/S = I
+<<<<<<< HEAD
 <<<<<<< HEAD
 		M = round(S.amount * S.caps_value)
 	else
@@ -128,11 +146,18 @@
 =======
 		final_value = FLOOR(S.amount * value_per, 1)
 	else
+=======
+		final_value = FLOOR(S.amount * value_per, 1)
+	else
+>>>>>>> parent of 36bf96597b (Crafting and Caps)
 		final_value = value_per
 
 	stored_caps += final_value
 	playsound(src, 'sound/items/change_jaws.ogg', 60, 1)
 	to_chat(usr, "You sell [final_value] bottle caps value to the [src]. Total caps: [stored_caps].")
+<<<<<<< HEAD
+>>>>>>> parent of 36bf96597b (Crafting and Caps)
+=======
 >>>>>>> parent of 36bf96597b (Crafting and Caps)
 	qdel(I)
 	src.ui_interact(usr)

@@ -50,7 +50,10 @@
 	list_reagents = list(/datum/reagent/drug/jet = 10)
 	icon_state = "bandaid_jet"
 <<<<<<< HEAD
+<<<<<<< HEAD
 	caps_value = 5
+=======
+>>>>>>> parent of 36bf96597b (Crafting and Caps)
 =======
 >>>>>>> parent of 36bf96597b (Crafting and Caps)
 

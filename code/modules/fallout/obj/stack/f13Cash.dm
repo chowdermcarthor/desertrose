@@ -41,7 +41,11 @@
 	var/flavor_desc =	"A standard Nuka-Cola bottle cap featuring 21 crimps and ridges,\
 					A common unit of exchange, backed by water in the Hub."
 <<<<<<< HEAD
+<<<<<<< HEAD
 	caps_value = CASH_CAP
+=======
+	var/value = CASH_CAP
+>>>>>>> parent of 36bf96597b (Crafting and Caps)
 =======
 	var/value = CASH_CAP
 >>>>>>> parent of 36bf96597b (Crafting and Caps)
@@ -85,7 +89,11 @@
 
 /obj/item/stack/f13Cash/get_item_credit_value()
 <<<<<<< HEAD
+<<<<<<< HEAD
 	return (amount*caps_value)
+=======
+	return (amount*value)
+>>>>>>> parent of 36bf96597b (Crafting and Caps)
 =======
 	return (amount*value)
 >>>>>>> parent of 36bf96597b (Crafting and Caps)
@@ -158,7 +166,11 @@
 		'Caesar Dictator' on the front and\n\
 		'Magnum Chasma' on the back."
 <<<<<<< HEAD
+<<<<<<< HEAD
 	caps_value = CASH_DEN * CASH_CAP
+=======
+	value = CASH_DEN * CASH_CAP
+>>>>>>> parent of 36bf96597b (Crafting and Caps)
 =======
 	value = CASH_DEN * CASH_CAP
 >>>>>>> parent of 36bf96597b (Crafting and Caps)
@@ -201,7 +213,11 @@
 					'Aeternit Imperi' on the front and\n\
 					'Pax Per Bellum' on the back."
 <<<<<<< HEAD
+<<<<<<< HEAD
 	caps_value = CASH_AUR * CASH_CAP
+=======
+	value = CASH_AUR * CASH_CAP
+>>>>>>> parent of 36bf96597b (Crafting and Caps)
 =======
 	value = CASH_AUR * CASH_CAP
 >>>>>>> parent of 36bf96597b (Crafting and Caps)
@@ -229,7 +245,11 @@
 	icon = 'icons/obj/economy.dmi'
 	icon_state = "ncr" /* 10 points to whoever writes flavour text for each bill */
 <<<<<<< HEAD
+<<<<<<< HEAD
 	caps_value = CASH_NCR * CASH_CAP
+=======
+	value = CASH_NCR * CASH_CAP
+>>>>>>> parent of 36bf96597b (Crafting and Caps)
 =======
 	value = CASH_NCR * CASH_CAP
 >>>>>>> parent of 36bf96597b (Crafting and Caps)

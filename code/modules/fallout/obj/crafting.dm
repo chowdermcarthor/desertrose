@@ -21,7 +21,10 @@
 	item_state = "null"
 	w_class = WEIGHT_CLASS_TINY
 <<<<<<< HEAD
+<<<<<<< HEAD
 	caps_value = 10
+=======
+>>>>>>> parent of 36bf96597b (Crafting and Caps)
 =======
 >>>>>>> parent of 36bf96597b (Crafting and Caps)
 
@@ -114,7 +117,10 @@
 	desc = "A pinnacle of engineering - it fixes everything!"
 	icon_state = "duct_tape"
 <<<<<<< HEAD
+<<<<<<< HEAD
 	caps_value = 30 //Jackpot
+=======
+>>>>>>> parent of 36bf96597b (Crafting and Caps)
 =======
 >>>>>>> parent of 36bf96597b (Crafting and Caps)
 
@@ -147,7 +153,10 @@
 	desc = "A pre-War cleaning agent produced by Abraxodyne Chemical."
 	icon_state = "abraxo"
 <<<<<<< HEAD
+<<<<<<< HEAD
 	caps_value = 8
+=======
+>>>>>>> parent of 36bf96597b (Crafting and Caps)
 =======
 >>>>>>> parent of 36bf96597b (Crafting and Caps)
 
@@ -157,7 +166,10 @@
 	icon_state = "reloader"
 	tool_behaviour = TOOL_MSRELOADER
 <<<<<<< HEAD
+<<<<<<< HEAD
 	caps_value = 20
+=======
+>>>>>>> parent of 36bf96597b (Crafting and Caps)
 =======
 >>>>>>> parent of 36bf96597b (Crafting and Caps)
 

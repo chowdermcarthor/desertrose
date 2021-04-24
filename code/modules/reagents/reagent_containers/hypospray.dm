@@ -313,7 +313,10 @@
 	amount_per_transfer_from_this = 10
 	list_reagents = list(/datum/reagent/drug/psycho = 10)
 <<<<<<< HEAD
+<<<<<<< HEAD
 	caps_value = 15
+=======
+>>>>>>> parent of 36bf96597b (Crafting and Caps)
 =======
 >>>>>>> parent of 36bf96597b (Crafting and Caps)
 
